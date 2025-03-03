@@ -300,3 +300,265 @@ button {
   background-color: #fff;
   border-color: #fff;
 }
+
+
+/* Version 2 */
+/* Basic styles for navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0; /* Align to the right */
+  margin: 10px;
+  padding: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  width: auto; /* Allow the navbar to take up only as much space as needed */
+}
+
+.navbar.scrolling {
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: flex-end;  /* Align the items to the right */
+  align-items: center;  /* Vertically center the items */
+  width: 100%;
+}
+
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar nav ul li {
+  margin: 0 15px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #333;  /* Set default text color to dark gray */
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;  /* Position for the border effect */
+  transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  color:#232323  /* Change text color on hover */
+}
+
+/* Add a border-bottom when hovering over the links */
+.navbar nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #232323; /* Border color on hover */
+  transition: width 0.3s ease;
+}
+
+.navbar nav ul li a:hover::after {
+  width: 100%;  /* Make the border span the entire width of the link */
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-top: 100px;
+  margin-inline: 100px;
+  background-color: #f9f9f9;
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-left {
+  flex: 1;
+  padding: 20px;
+  max-width: 500px;
+}
+
+.profile-left h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile-left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.profile-right {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.profile-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-left, .profile-right {
+    max-width: 100%;
+  }
+}
+
+/* Styling for about section */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-top: 100px;
+  margin-inline: 100px;
+  /* background-color: #f4f4f4; */
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-left {
+  flex: 1;
+  padding: 20px;
+  max-width: 500px;
+}
+
+.about-left h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about-left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-right {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.about-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left, .about-right {
+    max-width: 100%;
+  }
+}
+
+
+/* Styling for experience section */
+.experience-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.experience-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.experience-left {
+  flex: 1;
+  text-align: right;
+}
+
+.year {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.experience-right {
+  flex: 2;
+  text-align: left;
+}
+
+.experience-right h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.experience-right p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .experience-left {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .experience-right {
+    text-align: left;
+  }
+}
